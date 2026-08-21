@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Para ti, mi amor 💗</title>
+
+    <link
+        rel="stylesheet"
+        href="love.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     🎵 MÚSICA DE FONDO
+     ===================================== -->
+
+<audio
+    id="musica"
+    loop
+    preload="auto"
+>
+
+    <source
+        src="_melody.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<!-- =====================================
+     💌 INICIO
+     ===================================== -->
+
+<section
+    id="inicio"
+    class="pantalla activa"
+>
+
+    <div class="corazon-grande">
+        💗
+    </div>
+
+    <h1>
+        Hay algo que quiero decirte...
+    </h1>
+
+    <p>
+        Preparé este pequeño lugar
+        solamente para ti.
+    </p>
+
+    <p>
+        Quédate hasta el final. 💕
+    </p>
+
+    <button
+        class="btn"
+        onclick="comenzar()"
+    >
+        Abrir mi corazón 💌
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     🥺 PERDÓN
+     ===================================== -->
+
+<section
+    id="perdon"
+    class="pantalla"
+>
+
+    <div class="emoji">
+        🥺
+    </div>
+
+    <h2>
+        Antes que nada...
+    </h2>
+
+
+    <div class="carta">
+
+        <p>
+            Sé que quizá no existen palabras
+            perfectas para arreglar todo lo que
+            pude haber hecho mal.
+        </p>
+
+        <p>
+            Pero quiero decirte algo desde
+            lo más sincero de mi corazón:
+        </p>
+
+        <h3>
+            Perdóname. 💗
+        </h3>
+
+        <p>
+            Si alguna vez te hice sentir triste,
+            decepcionado o herido,
+            de verdad lo siento.
+        </p>
+
+        <p>
+            No quiero que un momento malo sea
+            más grande que todos los momentos
+            bonitos que hemos compartido.
+        </p>
+
+        <p>
+            Eres demasiado importante para mí
+            como para dejar que un error diga
+            más que todo lo que siento por ti.
+        </p>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="mostrar('globos')"
+    >
+        Tengo algo más que decirte 🎈
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     🎈 GLOBOS
+     ===================================== -->
+
+<section
+    id="globos"
+    class="pantalla"
+>
+
+    <div class="emoji">
+        🎈
+    </div>
+
+    <h2>
+        Revienta los globitos
+    </h2>
+
+    <p>
+        Cada uno guarda una pequeña razón
+        por la que eres especial para mí.
+    </p>
+
+
+    <div id="globos-container">
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+        <button
+            class="globo"
+            onclick="reventar(this)"
+        >
+            🎈
+        </button>
+
+    </div>
+
+
+    <div id="mensaje-globo"></div>
+
+
+    <button
+        id="continuar-globos"
+        class="btn oculto"
+        onclick="mostrar('sentimientos')"
+    >
+        Hay algo más... 💕
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     💞 SENTIMIENTOS
+     ===================================== -->
+
+<section
+    id="sentimientos"
+    class="pantalla"
+>
+
+    <div class="emoji">
+        💞
+    </div>
+
+    <h2>
+        No es solamente un "te amo"
+    </h2>
+
+
+    <div class="frase-box">
+
+        <p>
+            Te amo, sí...
+        </p>
+
+        <p>
+            Pero también admiro la persona
+            que eres.
+        </p>
+
+        <p>
+            Me encanta poder compartir contigo
+            mis risas, mis pensamientos
+            y mis pequeños momentos.
+        </p>
+
+        <p>
+            Porque contigo hasta los momentos
+            más sencillos pueden convertirse
+            en recuerdos especiales.
+        </p>
+
+        <p>
+            Eres alguien que consiguió ocupar
+            un lugar muy especial en mi corazón.
+        </p>
+
+        <p>
+            Y entre tantas personas en este mundo...
+        </p>
+
+        <h3>
+            Te elegiría a ti. 💗
+        </h3>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="mostrar('juego')"
+    >
+        Jugar por una sorpresa 🎮
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     🎮 MINI JUEGO
+     ===================================== -->
+
+<section
+    id="juego"
+    class="pantalla"
+>
+
+    <div class="emoji">
+        💗
+    </div>
+
+    <h2>
+        Encuentra los 5 corazones
+    </h2>
+
+    <p>
+        Hay cinco corazones escondidos.
+        Encuéntralos todos para desbloquear
+        algo especial.
+    </p>
+
+
+    <div id="zona-juego">
+
+
+        <button
+            class="corazon-juego c1"
+            onclick="encontrar(this)"
+            aria-label="Corazón escondido"
+        >
+            💗
+        </button>
+
+
+        <button
+            class="corazon-juego c2"
+            onclick="encontrar(this)"
+            aria-label="Corazón escondido"
+        >
+            💗
+        </button>
+
+
+        <button
+            class="corazon-juego c3"
+            onclick="encontrar(this)"
+            aria-label="Corazón escondido"
+        >
+            💗
+        </button>
+
+
+        <button
+            class="corazon-juego c4"
+            onclick="encontrar(this)"
+            aria-label="Corazón escondido"
+        >
+            💗
+        </button>
+
+
+        <button
+            class="corazon-juego c5"
+            onclick="encontrar(this)"
+            aria-label="Corazón escondido"
+        >
+            💗
+        </button>
+
+
+    </div>
+
+
+    <p id="contador">
+        Corazones encontrados: 0/5
+    </p>
+
+
+    <button
+        id="sorpresa"
+        class="btn oculto"
+        onclick="mostrar('cancion')"
+    >
+        🎵 Descubrir nuestra canción
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     🎵 NUESTRA CANCIÓN
+     ===================================== -->
+
+<section
+    id="cancion"
+    class="pantalla"
+>
+
+    <div class="emoji">
+        🎵💗
+    </div>
+
+    <h2>
+        Esta canción es para ti
+    </h2>
+
+
+    <div class="carta">
+
+        <p>
+            Hay canciones que simplemente
+            escuchamos...
+        </p>
+
+        <p>
+            y hay otras que terminan teniendo
+            un significado especial.
+        </p>
+
+        <h3>
+            Esta es nuestra canción. 💕
+        </h3>
+
+        <p>
+            Porque cada vez que la escucho,
+            inevitablemente pienso en ti.
+        </p>
+
+    </div>
+
+
+    <!-- ==================================
+         🎬 VIDEO
+         ================================== -->
+
+    <video
+        id="videoCancion"
+        class="video-cancion"
+        controls
+        playsinline
+        preload="metadata"
+        muted
+    >
+
+        <source
+            src="love_cancion.mp4"
+            type="video/mp4"
+        >
+
+        Tu navegador no puede reproducir
+        este video.
+
+    </video>
+
+
+    <p
+        id="errorVideo"
+        class="error-video"
+    ></p>
+
+
+    <button
+        class="btn"
+        onclick="mostrar('final')"
+    >
+        Ahora sí... 💌
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     💌 FINAL
+     ===================================== -->
+
+<section
+    id="final"
+    class="pantalla"
+>
+
+    <div class="lluvia-corazones">
+        💗 💕 💖 💞 💗
+    </div>
+
+
+    <h1>
+        Para ti ❤️
+    </h1>
+
+
+    <div class="carta final">
+
+        <p>
+            Quizá una página no pueda explicar
+            todo lo que siento...
+        </p>
+
+        <p>
+            pero quería intentar hacer algo
+            especial para ti.
+        </p>
+
+        <p>
+            Quiero que recuerdes que eres una
+            persona muy importante para mí.
+        </p>
+
+        <p>
+            Gracias por cada sonrisa,
+            cada conversación, cada momento
+            y cada recuerdo.
+        </p>
+
+        <p>
+            Y aunque a veces pueda equivocarme,
+            nunca quiero que dudes de lo mucho
+            que significas para mí.
+        </p>
+
+
+        <h2>
+            Te quiero muchísimo. 💗
+        </h2>
+
+
+        <p class="grande">
+            Más de lo que pueden explicar
+            unas cuantas palabras.
+        </p>
+
+
+        <div class="firma">
+
+            Con todo mi corazón,<br><br>
+
+            <strong>
+                TU ESPOSA 💕
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="crearCorazones()"
+    >
+        Una última sorpresa ✨
+    </button>
+
+</section>
+
+
+<script src="love.txt"></script>
+
+</body>
+
+</html>
